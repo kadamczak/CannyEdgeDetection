@@ -1,0 +1,16 @@
+;-------------------------------------------------------------------------
+LIBRARY CannyEdgeDetectionAlgorithmAsm
+EXPORTS ChangeBrightness					;test
+		SetupImageDimensions				;setup
+		SetupImageExtensions				;gauss
+		SetupGaussKernel
+		ConvoluteWithGaussKernel
+		CleanAfterGauss	
+		InitializeIntensityAngleTables		;sobel
+		ConvoluteWithSobelKernel
+		NormalizeSobel
+		ThinEdges							;thin edges
+		CleanIntensityAngleTables
+		CategorizeEdges						;categorize edges (hysteresis)
+		ConnectEdges						;hysteresis tracking
+;-------------------------------------------------------------------------
